@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "rewrites": [
+      {
+        "source": "/api/ticker/:symbol",
+        "destination": "/api/ticker.js?id=:symbol"
+      }
+    ]
+  }
+  
