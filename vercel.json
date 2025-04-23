@@ -1,10 +1,17 @@
 {
-    "version": 2,
-    "rewrites": [
-      {
-        "source": "/api/ticker/:symbol",
-        "destination": "/api/ticker.js?id=:symbol"
-      }
-    ]
-  }
-  
+  "version": 2,
+
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    }
+  ]
+}
